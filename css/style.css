@@ -1,0 +1,336 @@
+/* ====================== Connect the Lato font from Google fonts ==========*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+/* ====================== CCS Properties Home Work=============================== */
+body {
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	line-height: 26px;
+	color: #424551;
+}
+[class*="__container"] {
+	max-width: 1230px;
+	margin: 0 auto;
+}
+.wrapper {
+	overflow: hidden;
+	position: relative;
+	min-height: 100%;
+}
+.header {
+	position: fixed;
+	width: 57%;
+	left: 125px;
+	top: 24px;
+	background: transparent;
+	z-index: 100;
+}
+.header__container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.header__logo {
+	max-width: 100px;
+	transition: all 0.4s ease 0s;
+}
+.header__logo img {
+	max-width: 100%;
+}
+.header__logo:hover {
+	transform: rotate(360deg) scale(1.3);
+}
+.content__intro {
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	background: #fff;
+}
+.content__wrapper {
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	background: transparent;
+	transition: all 0.4s ease 0s;
+	z-index: 3;
+}
+#content-wrapper:target {
+	transform: translate(-400px,0);
+}
+#content:target {
+	transform: translate(0,0);
+}
+.content__link:first-of-type {
+	position: absolute;
+	right: 185px;
+	top: 45px;
+	height: 26px;
+	width: 70px;
+	z-index: 4;
+}
+.content__link:first-of-type:hover .link__item {
+	transform: translate(-20px,0);
+	opacity: 1;
+}
+.content__link:last-of-type {
+	position: absolute;
+	right: 85px;
+	top: 45px;
+	height: 26px;
+	width: 70px;
+	z-index: 4;
+}
+.content__link:last-of-type:hover .link__item {
+	transform: translate(20px,0);
+	opacity: 1;
+}
+.link:first-of-type .link__item,
+.link:last-of-type .link__item {
+	display: inline-block;
+	position: absolute;
+	height: 8px;
+	width: 70px;
+	background: #fff;
+	z-index: 4;
+	transition: all 0.4s ease 0s;
+	opacity: 0.75;
+}
+.link:first-of-type .link__item {
+	right: 0px;
+	top: 8px;
+	border-radius: 5px 0 0 5px;
+}
+.link:last-of-type .link__item {
+	right: 0px;
+	top: 8px;
+	border-radius: 0 5px 5px 0;
+}
+.link:first-of-type .link__item::before {
+	content: "";
+	position: absolute;
+	top: 7px;
+	left: -4px;
+	height: 8px;
+	width: 28px;
+	background: #fff;
+	transform: rotate(45deg);
+}
+.link:first-of-type .link__item::after {
+	content: "";
+	position: absolute;
+	top: -7px;
+	left: -4px;
+	height: 8px;
+	width: 28px;
+	background: #fff;
+	transform: rotate(-45deg);
+}
+.link:last-of-type .link__item:before {
+	content: "";
+	position: absolute;
+	top: 7px;
+	right: -4px;
+	height: 8px;
+	width: 28px;
+	background: #fff;
+	transform: rotate(-45deg);
+}
+.link:last-of-type .link__item::after {
+	content: "";
+	position: absolute;
+	top: -7px;
+	right: -4px;
+	height: 8px;
+	width: 28px;
+	background: #fff;
+	transform: rotate(45deg);
+}
+.content__text {
+	position: absolute;
+	right: 24px;
+	top: 46px;
+	z-index: 2;
+	color: #000;
+	text-transform: uppercase;
+	font-size: 30px;
+}
+.content__text:nth-of-type(3) {
+	top: 455px;
+	right: 88px;
+}
+.content__text:nth-of-type(4) {
+	right: 110px;
+	top: 95%;
+}
+.content__img {
+	width: 440px;
+	position: absolute;
+	right: -15px;
+	top: 59px;
+	z-index: 2;
+}
+.content__img:last-of-type {
+	width: 80px;
+	position: absolute;
+	right: 15px;
+	top: 90%;
+	z-index: 2;
+}
+.content__video {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	z-index: 4;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.palm {
+	width: 440px;
+	position: absolute;
+	right: 254px;
+	top: 398px;
+	z-index: 2;
+	transform: scale(0.55);
+}
+.leaf__item	{
+	position: absolute;
+	top: 400px;
+	left: 500px;
+	width: 400px;
+	height: 120px;
+	background: rgb(1, 164, 1);
+	border-radius: 70% 25% 25% 70% / 50% 50% 50% 50%;
+	border: 4px solid #000;
+	transform: rotate(-70deg);
+	overflow: hidden;
+	z-index: 3;
+}
+.leaf__corner {
+	position: absolute;
+	top: -25px;
+	left: 0px;
+	width: 70px;
+	height: 60px;
+	background: #fff;
+	border: 5px solid #000;
+	transform: skew(47deg, 10deg) rotate(18deg);
+}
+.leaf__corner:nth-child(2) {
+	position: absolute;
+	top: -40px;
+	left: 39px;
+	width: 70px;
+	height: 60px;
+	background: #fff;
+	border: 5px solid #000;
+	transform: skew(47deg, 10deg) rotate(38deg);
+}
+.leaf__corner:nth-child(3) {
+	position: absolute;
+	top: -52px;
+	left: 175px;
+	width: 70px;
+	height: 60px;
+	background: #fff;
+	border: 5px solid #000;
+	transform: skew(47deg, 10deg) rotate(-36deg);
+}
+.leaf__corner:nth-child(4) {
+	position: absolute;
+	top: 96px;
+	left: 57px;
+	width: 70px;
+	height: 60px;
+	background: #fff;
+	border: 5px solid #000;
+	transform: skew(-10deg, -12deg) rotate(-13deg);
+}
+.leaf__corner:nth-child(5) {
+	position: absolute;
+	top: 104px;
+	left: 191px;
+	width: 70px;
+	height: 60px;
+	background: #fff;
+	border: 5px solid #000;
+	transform: skew(2deg, -28deg) rotate(-3deg);
+}
+.leaf__item:nth-child(2)	{
+	position: absolute;
+	top: 293px;
+	left: 386px;
+	width: 400px;
+	height: 120px;
+	background: rgb(1, 164, 1);
+	border-radius: 70% 25% 25% 70% / 50% 50% 50% 50%;
+	border: 4px solid #000;
+	transform: rotate(-23deg);
+	overflow: hidden;
+	z-index: 2;
+} 
+.leaf__item:nth-child(2)::after {
+	content: "";
+	position: absolute;
+	top: 87px;
+	left: 5px;
+	width: 400px;
+	height: 120px;
+	background: #fff;
+	border-radius: 50%;
+	border: 4px solid #000;
+}
+.leaf__item:nth-child(3) {
+	position: absolute;
+	top: 332px;
+	left: 700px;
+	width: 400px;
+	height: 120px;
+	background: rgb(1, 164, 1);
+	border-radius: 70% 25% 25% 70% / 50% 50% 50% 50%;
+	border: 4px solid #000;
+	transform: rotate(-146deg);
+	overflow: hidden;
+	z-index: 2;
+} 
+.leaf__item:nth-child(4) {
+	position: absolute;
+	top: 235px;
+	left: 366px;
+	width: 400px;
+	height: 120px;
+	background: rgb(1, 164, 1);
+	border-radius: 70% 25% 25% 70% / 50% 50% 50% 50%;
+	border: 4px solid #000;
+	transform: rotate(-3deg);
+	overflow: hidden;
+	z-index: 1;
+} 
+.palm__stalk {
+	position: absolute;
+	top: 336px;
+	left: 578px;
+	width: 60px;
+	height: 500px;
+	background: rgb(138, 77, 6);
+	transform: skew(-21deg, 0deg);
+	border: 4px solid #000;
+}
+.footer {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	text-align: center;
+	background: transparent;
+	color: #fff; 
+	z-index: 3;
+}
+.footer__title {
+	display: inline-block;
+	font-size: 30px;
+	padding: 22px;
+}
+.footer__link img{
+	max-width: 70px;
+}
